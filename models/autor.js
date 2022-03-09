@@ -9,7 +9,7 @@ class Autor {
     const connect = await db.connect();
     const sql = "insert into autores(nome, sobrenome, data_de_nascimento) values($1, $2, $3)"
     const values = [data.nome, data.sobrenome, data.datanascimento]
-    return await connect.query (sql, values)
+    return await connect.query(sql, values)
   }
 }
 
