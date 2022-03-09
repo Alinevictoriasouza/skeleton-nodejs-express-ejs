@@ -5,7 +5,7 @@ let connect = function(){
 
   const { Pool } = require("pg");
   const pool = new Pool({
-    connectionString: "postgres://zyblfdkn:8iZDEe3_HUBAljR-a2nyNQup7L3aOX95@kesavan.db.elephantsql.com/zyblfdkn"
+    connectionString: "postgres://yvibtrjb:NCDL7xiJgt6fzWNCeEJowOmp51O-C4yf@kesavan.db.elephantsql.com/yvibtrjb"
   });
 
   global.connection = pool;
