@@ -18,7 +18,11 @@ class Autor {
     const values = [data.nome, data.sobrenome, data.datanascimento, id]
     return await connect.query(sql, values)
   }
+
+  
 }
+
+
 
 
 
