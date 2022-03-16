@@ -18,4 +18,14 @@ router.get('/inserir', async function(req, res, next) {
   res.json(autores.rows);
 }) ;
 
+router.get('/atualizar', async function(req, res, next) {
+  let autor = {
+    nome: "Aline_",
+    sobrenome: "Souza",
+    datanascimento:"1998-04-01"
+  };
+  const autores = await Autor.atualizar(autor, 11);
+  res.json(autores.rows);
+}) ;
+
 module.exports = router;
