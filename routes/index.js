@@ -18,13 +18,8 @@ router.post('/inserir', async function(req, res, next) {
   res.json(autores.rows);
 }) ;
 
-router.get('/atualizar', async function(req, res, next) {
-  let autor = {
-    nome: "Aline_",
-    sobrenome: "Souza",
-    datanascimento:"1998-04-01"
-  };
-  const autores = await Autor.atualizar(autor, 11);
+router.get('/deletar', async function(req, res, next) {
+  const autores = await Autor.deletar(11);
   res.json(autores.rows);
 }) ;
 

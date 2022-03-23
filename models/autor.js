@@ -19,7 +19,12 @@ class Autor {
     return await connect.query(sql, values)
   }
 
-  
+  static async deletar(id){
+    const connect = await db.connect();
+    const sql = "delete from autores where id = $1 ";
+    return await connect.query(sql, [id])
+  }
+}
 }
 
 
