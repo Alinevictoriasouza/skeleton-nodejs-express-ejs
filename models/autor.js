@@ -25,10 +25,5 @@ class Autor {
     return await connect.query(sql, [id])
   }
 }
-}
-
-
-
-
 
 module.exports = Autor;
