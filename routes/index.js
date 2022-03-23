@@ -9,12 +9,17 @@ router.get('/', async function(req, res, next) {
 }) ;
 
 router.post('/inserir', async function(req, res, next) {
+  const autores = await Autor.inserir(req.body);
+  res.json(autores.rows);
+}) ;
+
+router.get('/atualizar', async function(req, res, next) {
   let autor = {
-    nome: "Aline",
+    nome:"Aline",
     sobrenome: "Souza",
-    datanascimento:"1998-05-09"
+    datanascimento: "1999-02-05"
   };
-  const autores = await Autor.inserir(autor);
+  const autores = await Autor.atualizar(autor, 12);
   res.json(autores.rows);
 }) ;
 
