@@ -39,6 +39,10 @@ router.post('/inserir_livros', async function(req, res, next) {
   res.json(livros.rows);
 }) ;
 
+router.put('/atualizar_livros', async function(req, res, next) {
+  const livros = await Livro.atualizar_livro(req.body);
+  res.json(livros.rows);
+}) ;
 
                                              
 
