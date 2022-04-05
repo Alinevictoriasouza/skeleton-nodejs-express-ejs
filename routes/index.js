@@ -44,6 +44,10 @@ router.put('/atualizar_livros', async function(req, res, next) {
   res.json(livros.rows);
 }) ;
 
+router.delete('/deletar_livros', async function(req, res, next) {
+  const livros = await Livro.deletar_livro(req.body.id);
+  res.json(livros.rows);
+}) ;
                                              
 
 module.exports = router;
